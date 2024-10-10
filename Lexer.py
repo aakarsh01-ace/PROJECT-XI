@@ -3,7 +3,7 @@ import ply.lex as lex
 # list of tokens
 tokens = [
     'NUMBERS', 'IDENTIFIER', 'PLUS', 'MINUS', 'TIMES', 'DIVIDE', 'EQUALS',
-    'LPAREN', 'RPAREN', 'LBRACE', 'RBEACE', 'SEMICOLON', 'GT', 'LT'
+    'LPAREN', 'RPAREN', 'LBRACE', 'RBRACE', 'SEMICOLON', 'GT', 'LT'
 ]
 
 # Reserved keywords
@@ -21,13 +21,13 @@ t_MINUS = r'\-'
 t_TIMES = r'\*'
 t_DIVIDE = r'/'
 t_EQUALS = r'='
-t_LPAREN = r'('
-r_RPAREN = r')'
-r_LBRACE = r'{'
-r_RBRACE = r'}'
-r_SEMICOLON = r';'
-r_GT = r'>'
-r_RT = r'<'
+t_LPAREN = r'\('
+t_RPAREN = r'\)'
+t_LBRACE = r'\{'
+t_RBRACE = r'\}'
+t_SEMICOLON = r';'
+t_GT = r'>'
+t_LT = r'<'
 
 # Num token
 def t_NUMBERS(t):

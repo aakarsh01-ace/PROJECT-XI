@@ -1,0 +1,74 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Unused terminals:
+
+    GT
+    LT
+    NUMBERS
+
+Grammar
+
+Rule 0     S' -> program
+Rule 1     program -> statement_lst
+Rule 2     statement_list -> statement
+Rule 3     statement_list -> statement_list element
+Rule 4     statement -> declr
+Rule 5     statement -> assignment
+Rule 6     statement -> print_stmt
+Rule 7     statement -> if_stmt
+Rule 8     statement -> while_stmt
+Rule 9     declaration -> INT IDENTIFIER EQUALS expression SEMICOLON
+Rule 10    expression -> term
+Rule 11    expression -> term PLUS term
+Rule 12    expression -> term MINUS term
+Rule 13    term -> factor
+Rule 14    term -> factor TIMES factor
+Rule 15    term -> factor DIVIDE factor
+Rule 16    factor -> NUMBER
+Rule 17    factor -> INDETIFIER
+Rule 18    factor -> LPAREN expression RPAREN
+Rule 19    print_stmt -> PRINT LPAREN expression RPAREN SEMICOLON
+Rule 20    if_stmt -> IF LPAREN expression RPAREN LBRACE statement_lst RBRACE
+Rule 21    while_stmt -> WHILE LPAREN expression RPAREN LBRACE statement_lst RBRACE
+
+Terminals, with rules where they appear
+
+DIVIDE               : 15
+EQUALS               : 9
+GT                   : 
+IDENTIFIER           : 9
+LBRACE               : 20 21
+LPAREN               : 18 19 20 21
+LT                   : 
+MINUS                : 12
+NUMBERS              : 
+PLUS                 : 11
+RBRACE               : 20 21
+RPAREN               : 18 19 20 21
+SEMICOLON            : 9 19
+TIMES                : 14
+error                : 
+
+Nonterminals, with rules where they appear
+
+IF                   : 20
+INDETIFIER           : 17
+INT                  : 9
+NUMBER               : 16
+PRINT                : 19
+WHILE                : 21
+assignment           : 5
+declaration          : 
+declr                : 4
+element              : 3
+expression           : 9 18 19 20 21
+factor               : 13 14 14 15 15
+if_stmt              : 7
+print_stmt           : 6
+program              : 0
+statement            : 2
+statement_list       : 3
+statement_lst        : 1 20 21
+term                 : 10 11 11 12 12
+while_stmt           : 8
+
