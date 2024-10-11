@@ -25,3 +25,4 @@ def generate_python(ast):
         return f"while {cond}:\n    {body}"
     elif ast[0] == 'print':
         return f"print({genearte_python(ast[1])})"
+    # MORE CHANGES NEEDED 
